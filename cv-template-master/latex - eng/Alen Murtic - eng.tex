@@ -1,0 +1,133 @@
+\documentclass[a4paper]{article}
+
+\usepackage[
+    top=0.79in,
+    bottom=0.79in,
+    left=0.79in,
+    right=0.79in,
+]{geometry}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{10pt}
+\newlength{\tablewidth}
+
+\setlist[itemize]{topsep=0em, itemsep=0.0em}
+\setlist[itemize,1]{before=\vspace{-1em}}
+
+\newenvironment{period}[2]{%
+\newcommand{\sarma}{#2}%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.75\tablewidth}>{\raggedleft\arraybackslash}p{0.25\tablewidth}@{}}%
+#1 \newline
+\begin{itemize}
+}{%
+\end{itemize} & \sarma \\%
+\end{tabular}\\
+}
+
+\newenvironment{skills}{%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.15\tablewidth}p{0.85\tablewidth}@{}}
+}{%
+\end{tabular}
+}
+
+\titleformat{\section}{\uppercase}{}{0pt}{}[{\vspace{0.5em}\titlerule}]
+\titleformat{\subsection}{\bf}{}{0pt}{}{}
+\titlespacing{\section}{0pt}{1em}{0.5em}
+\titlespacing{\subsection}{0pt}{0pt}{0.1em}
+
+\begin{document}
+\fontfamily{\sfdefault}
+\selectfont
+
+\begin{minipage}{.5\textwidth}
+\LARGE{Alen Murtić}\\
+\normalsize{14 Nabrežje, Horvati, 10 436 Rakov Potok
+	\newline
+	Zagreb, Croatia}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\raggedleft
+\href{mailto:murtic.alen@hotmail.com}{murtic.alen@hotmail.com} \\
++385 98/9755-058 \\
+\href{https://github.com/murticalen}{github.com/murticalen}
+\end{minipage}
+
+\vspace{1em}
+
+\section{work experience}
+
+\subsection{University of Zagreb, Faculty of Electrical Engineering and Computing, Croatia}
+\begin{period}{Teaching assistant}{Oct 2016 -- Nov 2016}
+	\item Introduction to PHP/MySQL
+\end{period}
+\begin{period}{Team projects}{}
+	\item managed a team of 3 students in \textit{Project} class
+	\item contributed as a member in various other classes\end{period}
+
+\section{education}
+\subsection{University of Zagreb, Faculty of Electrical Engineering and Computing, Croatia}
+\begin{period}{Pursuing MSc in Computer Science}{Sep 2016 -- Jul 2018\linebreak(expected)}
+    \item field of study:
+        data analysis
+    \item relevant courses:
+	    \textit{\href{%http://www.fer.unizg.hr/en/course/su
+	    	}{Machine Learning}},
+	    \textit{\href{%http://www.fer.unizg.hr/en/course/advdat
+	    	}{Advanced Databases}}
+\end{period}
+\begin{period}{BSc in Computing}{Sep 2013 -- Jul 2016}
+    \item thesis:
+        \textit{Application logic and data layer development for an e-learning system}
+    \item relevant courses:
+	    \textit{\href{%https://www.fer.unizg.hr/en/course/dat_a
+	    		}{Databases}},
+		\textit{\href{%https://www.fer.unizg.hr/en/course/objpro
+				}{Object-oriented Programming}},
+		\textit{\href{%https://www.fer.unizg.hr/en/course/artint
+				}{Artificial Intelligence}},
+		\textit{\href{%https://www.fer.unizg.hr/en/course/dosa
+				}{Development of Software Applications}}
+\end{period}
+
+\section{technical skills}
+\begin{skills}
+    Intermediate &
+    \begin{itemize}
+        \item \textbf{Java, C\#, SQL} -- used in university courses and various projects
+        %\item \textbf{C\#} -- used in university courses and various projects
+        %\item \textbf{SQL} -- used in university courses and various projects
+        \item \textbf{Python} -- used in AI/ML university courses
+        \item \textbf{R} -- completed optional course
+    \end{itemize} \\
+    Basic &
+    \begin{itemize}
+        \item \textbf{PHP, MongoDB, PostgreSQL, GIT, TeX}
+    \end{itemize} \\
+\end{skills}
+
+%\section{major achievements}
+%\begin{skills}
+%	C programming   &   ranked 2/50 at 2010 Elektrijada contest (international electrical engineering students' 
+%	\nobreak{gathering}) \\
+%	English         &   ranked 3/30 at 2007 national competition
+%\end{skills}
+
+\section{other skills and interests}
+\begin{skills}
+	Languages & Croatian (native), English (fluent), German (basic) \\
+	Interests & Advanced sports statistics and its application, history, NBA, NFL \\
+\end{skills}
+
+\end{document}

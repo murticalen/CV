@@ -1,0 +1,134 @@
+\documentclass[a4paper]{article}
+
+\usepackage[
+    top=0.79in,
+    bottom=0.79in,
+    left=0.79in,
+    right=0.79in,
+]{geometry}
+
+\usepackage[croatian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{10pt}
+\newlength{\tablewidth}
+
+\setlist[itemize]{topsep=0em, itemsep=0.0em}
+\setlist[itemize,1]{before=\vspace{-1em}}
+
+\newenvironment{period}[2]{%
+\newcommand{\sarma}{#2}%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.75\tablewidth}>{\raggedleft\arraybackslash}p{0.25\tablewidth}@{}}%
+#1 \newline
+\begin{itemize}
+}{%
+\end{itemize} & \sarma \\%
+\end{tabular}\\
+}
+
+\newenvironment{skills}{%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\begin{tabular}{@{}p{0.15\tablewidth}p{0.85\tablewidth}@{}}
+}{%
+\end{tabular}
+}
+
+\titleformat{\section}{\uppercase}{}{0pt}{}[{\vspace{0.5em}\titlerule}]
+\titleformat{\subsection}{\bf}{}{0pt}{}{}
+\titlespacing{\section}{0pt}{1em}{0.5em}
+\titlespacing{\subsection}{0pt}{0pt}{0.1em}
+
+\begin{document}
+\fontfamily{\sfdefault}
+\selectfont
+
+\begin{minipage}{.5\textwidth}
+\LARGE{Alen Murtić}\\
+\normalsize{Nabrežje 14, Horvati, 10 436 Rakov Potok
+	\newline
+	Zagreb, RH}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\raggedleft
+\href{mailto:murtic.alen@hotmail.com}{murtic.alen@hotmail.com} \\
++385 98/9755-058 \\
+\href{https://github.com/murticalen}{github.com/murticalen}
+\end{minipage}
+
+\vspace{1em}
+
+\section{Radno iskustvo}
+
+\subsection{Sveučilište u Zagrebu, Fakultet elektrotehnike i računarstva}
+\begin{period}{demonstrator}{10/2016 -- 11/2016}
+	\item radionica o tehnologijama PHP/MySQL
+\end{period}
+\begin{period}{rad u timovima}{}
+	\item vodio tim od 3 člana na predmetu \textit{Projekt iz programske potpore}
+	\item sudjelovao kao član na različitim drugim predmetima\end{period}
+
+\section{Obrazovanje}
+\subsection{Sveučilište u Zagrebu, Fakultet elektrotehnike i računarstva}
+\begin{period}{student diplomskog studija Računarske znanosti} {9/2016 -- 7/2018\linebreak(očekivano)}
+    \item područje studija:
+        analiza podataka
+    \item važniji predmeti:
+	    \textit{\href{%http://www.fer.unizg.hr/predmet/su
+	    	}{Strojno učenje}},
+	    \textit{\href{%http://www.fer.unizg.hr/predmet/nmbp
+	    	}{Napredni modeli i baze podataka}}
+\end{period}
+\begin{period}{univ. bacc. ing. računarstva}{9/2013 -- 7/2016}
+    \item završni rad:
+        \textit{Razvoj podatkovnog sloja i aplikacijske logike za potrebe sustava elektroničkog učenja}
+    \item važniji predmeti:
+	    \textit{\href{%https://www.fer.unizg.hr/predmet/bazepod
+	    		}{Baze podataka}},
+		\textit{\href{%https://www.fer.unizg.hr/predmet/oopj
+				}{Objektno orijentirano programiranje}},
+		\textit{\href{%https://www.fer.unizg.hr/predmet/umjint
+				}{Umjetna inteligencija}},
+		\textit{\href{%https://www.fer.unizg.hr/predmet/rppp
+				}{Razvoj primijenjene programske potpore}}
+\end{period}
+
+\section{Znanja tehnologija}
+\begin{skills}
+    napredno &
+    \begin{itemize}
+        \item \textbf{Java, C\#, SQL} -- korišteni na različitim predmetima i projektima
+        %\item \textbf{C\#} -- used in university courses and various projects
+        %\item \textbf{SQL} -- used in university courses and various projects
+        \item \textbf{Python} -- korišten na predmetima AI/ML
+        \item \textbf{R} -- završio vještinu \textit{\href{%https://www.fer.unizg.hr/predmet/opjr
+        	}{Osnove programskog jezika R}}
+    \end{itemize} \\
+    osnovno &
+    \begin{itemize}
+        \item \textbf{PHP, MongoDB, PostgreSQL, GIT, TeX}
+    \end{itemize} \\
+\end{skills}
+
+%\section{major achievements}
+%\begin{skills}
+%	C programming   &   ranked 2/50 at 2010 Elektrijada contest (international electrical engineering students' 
+%	\nobreak{gathering}) \\
+%	English         &   ranked 3/30 at 2007 national competition
+%\end{skills}
+
+\section{Druga znanja i interesi}
+\begin{skills}
+	strani jezici & engleski (napredna razina), njemački (osnovna razina) \\
+	interesi & primjena napredne sportske statistike, povijest, NBA, NFL\\
+\end{skills}
+
+\end{document}
